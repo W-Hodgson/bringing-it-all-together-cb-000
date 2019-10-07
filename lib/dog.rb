@@ -46,6 +46,7 @@ class Dog
       dog = self.new_from_db(dog_data)
     else
       dog = self.create(name: dog_hash[:name], breed: dog_hash[:breed])
+    end
   end
 
 end
