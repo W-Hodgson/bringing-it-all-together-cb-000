@@ -47,6 +47,7 @@ class Dog
     else
       dog = self.create(name: dog_hash[:name], breed: dog_hash[:breed])
     end
+    dog
   end
 
 end
