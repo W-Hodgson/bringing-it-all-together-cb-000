@@ -40,7 +40,9 @@ class Dog
   end
 
   def self.find_by_name(name)
-    DB[:conn].execute("SELECT * FROM dogs WHERE name = ?", name)
+    DB[:conn].execute("SELECT * FROM dogs WHERE name = ?", name).map do |dog|
+
+    end
   end
 
   def self.find_or_create_by(dog_hash)
