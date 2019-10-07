@@ -42,7 +42,7 @@ class Dog
   def self.find_or_create_by(dog)
     DB[:conn].execute("SELECT * FROM dogs WHERE name = ? and breed = ?", dog["name"], dog["breed"]).map do |dog|
       self.new_from_db(dog)
-    end
+    end.first
   end
 
 end
