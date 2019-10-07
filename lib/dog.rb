@@ -45,7 +45,10 @@ class Dog
     end.first
 
     dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? and breed = ?", dog[:name], dog[:breed])
-    
+    if !dog.empty?
+
+    else
+
   end
 
 end
