@@ -56,8 +56,8 @@ class Dog
     dog
   end
 
-  def update
-  
+  def update(name:, breed:)
+
   end
 
 end
