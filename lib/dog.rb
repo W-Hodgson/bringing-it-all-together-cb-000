@@ -56,8 +56,8 @@ class Dog
     dog
   end
 
-  def update(name:, breed:)
-    DB[:conn].execute("UPDATE dogs SET name = ?, breed = ?", name, breed)
+  def update(name:, breed:, id:)
+    DB[:conn].execute("UPDATE dogs SET name = ?, breed = ? where", name, breed)
   end
 
 end
